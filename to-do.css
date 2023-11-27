@@ -9,12 +9,14 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 30vh;
-    gap: 8px;
+    gap: 20px;
     height: 100vh;
 }
 .options-Windows{
     width:fit-content ;
-    background-color:#ebecf0 ;
+    background: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.635);
+    box-shadow: 2px -4px 30px 3px rgba(25, 27, 17, 0.5);
     border-radius: 8px;
     height: fit-content;
     padding: 8px;
@@ -42,4 +44,57 @@ body{
 }
 .add-btn:hover{
     background-color:rgba(0, 0, 0, 0.1) ;
+}
+
+/* --------------------------------------- */
+.input-container{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    visibility: hidden;
+}
+.input-data-container{
+    width: 400px;
+    height: fit-content;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px rgba(12, 12, 12, 0.302);
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid rgba(223, 214, 214, 0.832);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    font-weight: 700;
+}
+#text{
+    width: 98%;
+    height: 30px;
+    border-radius: 5px;
+}
+#description{
+    width: 99.2%;
+    border-radius: 5px;
+}
+#status{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+#priority{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+.add-Button{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
