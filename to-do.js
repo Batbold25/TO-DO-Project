@@ -23,7 +23,22 @@ for ( var i = 0; i < btnRef.length; i++){
 function createTask(title, description, priority) {
     const taskCont = document.createElement("div");
     taskCont.id = "taskCont";
-    task.appendChild(taskCont);
+    // task.appendChild(taskCont);
+
+    // select option  carts 
+
+    console.log( " status ", statusRef.value);
+    if (statusRef.value === "to-DO"){
+        task.appendChild (taskCont)
+        console.log(task);
+    }
+    if (statusRef.value === "in-progress"){
+        inProText.appendChild (taskCont)
+    }
+    if (statusRef.value === "stuck"){
+        stuckText.appendChild (taskCont)
+    }
+
 
     const done = document.createElement("div");
     done.id = "done";
@@ -55,7 +70,7 @@ function createTask(title, description, priority) {
         console.log(event.target.parentNode)
         const parent = event.target.parentNode.parentNode.parentNode
         console.log(parent.parentNode);
-        const taskContainer = parent.parentNode;
+        const taskContainer = parent.parentNode; 
         taskContainer.removeChild(taskCont)
    
     
@@ -79,7 +94,16 @@ function createTask(title, description, priority) {
     taskPriority.id = "valueS";
     text.appendChild(taskPriority);
     taskPriority.textContent = priority;
+
+    
 }
+function updateTaskCount() {
+    const taskContObjects = document.querySelectorAll("#taskCont");
+    const taskCountSpan = document.querySelector(".to-do");
+  
+    taskCountSpan.textContent = taskContObjects.length;
+}
+  
 
 addTask.addEventListener("click", () => {
     input.style.visibility = "hidden";
@@ -89,6 +113,8 @@ addTask.addEventListener("click", () => {
     createTask(titleRef.value, descriptionRef.value, priorityInputRef.value);
     titleRef.value = ""
     descriptionRef.value = ""
+
+    updateTaskCount();
 });
 
 
