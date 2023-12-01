@@ -97,11 +97,29 @@ function createTask(title, description, priority) {
 
     
 }
-function updateTaskCount() {
-    const taskContObjects = document.querySelectorAll("#taskCont");
-    const taskCountSpan = document.querySelector(".to-do");
+
+function TaskCount() {
+    const taskContObjects = document.getElementById("task").childElementCount;
+    const taskCountSpan = document.getElementById("todo-counts");
+    console.log("task length",taskContObjects.length);
+
+    const CountInproObjects = document.getElementById("inProText").childElementCount;
+    const inproSpan = document.getElementById("progress-counts");
+
+    console.log("inprogress length", CountInproObjects.length);
+
+    const countStukOject = document.getElementById("stuck-Text").childElementCount;
+    const stukSpan = document.getElementById("stuck-counts");
+
+    const counDoneObject = document.getElementById ("doneCont").childElementCount;
+    const doneSpan = document.getElementById("done-counts")
   
-    taskCountSpan.textContent = taskContObjects.length;
+    taskCountSpan.textContent = taskContObjects;
+    inproSpan.textContent = CountInproObjects;
+    stukSpan.textContent = countStukOject;
+    doneSpan.textContent = counDoneObject;
+
+
 }
   
 
@@ -114,8 +132,12 @@ addTask.addEventListener("click", () => {
     titleRef.value = ""
     descriptionRef.value = ""
 
-    updateTaskCount();
+    TaskCount();
 });
+
+
+
+
 
 
 

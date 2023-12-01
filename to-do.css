@@ -9,11 +9,11 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 30vh;
-    gap: 20px;
+    gap: 30px;
     height: 100vh;
 }
 .options-Windows{
-    width:fit-content ;
+    width: fit-content ;
     background: inherit;
     border: 1px solid rgba(255, 255, 255, 0.635);
     box-shadow: 2px -4px 30px 3px rgba(25, 27, 17, 0.5);
@@ -52,6 +52,7 @@ body{
     width: fit-content;
     height: fit-content;
     position: absolute;
+    top: 30%;
     visibility: hidden;
 }
 .input-data-container{
@@ -151,4 +152,8 @@ body{
 }
 #action i {
     cursor: pointer;
+}
+#textCart > p {
+    width: 150px;
+    
 }
