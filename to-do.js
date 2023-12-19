@@ -9,7 +9,8 @@ const task = document.getElementById("task");
 const taskContainer = document.querySelectorAll(".task");
 const inProText = document.getElementById("inProText");
 const stuckText = document.getElementById("stuck-Text");
-const doneText = document.getElementById("doneCont")
+const doneText = document.getElementById("doneCont");
+const main = document.getElementById("main")
 
 console.log("taskContainer", taskContainer);
 
@@ -125,7 +126,6 @@ function TaskCount() {
 
 addTask.addEventListener("click", () => {
     input.style.visibility = "hidden";
-
 
     // Call the createTask function with the input values
     createTask(titleRef.value, descriptionRef.value, priorityInputRef.value);
